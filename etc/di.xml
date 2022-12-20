@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Date: 23/12/2022
+ *
+ * @package     MaciejBuchert_CaptchaBase64Encoding
+ * @author      Maciej Buchert <maciej@buchert.pl>
+ * @copyright   2022-2072 Maciej Buchert
+ * @license     OSL-3.0, AFL-3.0
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Captcha\Block\Captcha\DefaultCaptcha">
+        <plugin name="mb_captcha_modify_template" type="MaciejBuchert\CaptchaBase64Encoding\Plugin\ModifyTemplate" sortOrder="10" disabled="false" />
+    </type>
+    <type name="Magento\Captcha\Model\CaptchaFactory">
+        <plugin name="mb_captcha_add_captcha_model" type="MaciejBuchert\CaptchaBase64Encoding\Plugin\AddCaptchaModel" />
+    </type>
+    <preference for="Magento\Captcha\Model\CaptchaInterface" type="MaciejBuchert\CaptchaBase64Encoding\Model\Encoded"/>
+</config>

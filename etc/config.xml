@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Date: 23/12/2022
+ *
+ * @package     MaciejBuchert_CaptchaBase64Encoding
+ * @author      Maciej Buchert <maciej@buchert.pl>
+ * @copyright   2022-2072 Maciej Buchert
+ * @license     OSL-3.0, AFL-3.0
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customer>
+            <captcha>
+                <type>encoded</type>
+            </captcha>
+        </customer>
+    </default>
+</config>
